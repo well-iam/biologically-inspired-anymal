@@ -6,7 +6,7 @@
 
 **Reinforcement Learning framework for high-speed quadrupedal locomotion, featuring Curriculum Learning and custom Reward Shaping.**
 
-This project implements a Reinforcement Learning framework to enforce a dynamic Bounding Gait on the ANYmal-C robot. By leveraging Curriculum Learning and custom Reward Shaping for phase synchronization , the policy achieves stable locomotion up to 3.0 m/s. The training pipeline is specifically optimized to run efficiently on consumer-grade hardware (RTX 3060 Laptop) within the NVIDIA Isaac Lab environment.
+This project implements a Reinforcement Learning framework to enforce a dynamic Bounding Gait on the ANYmal-C robot. By leveraging Curriculum Learning and custom Reward Shaping for phase synchronization , the policy achieves stable locomotion up to 3.0 m/s. The training pipeline is specifically optimized to run on consumer-grade hardware (RTX 3060 Laptop) within the NVIDIA Isaac Lab environment.
 
 <div align="center">
   <img src="media/field_and_service_git.gif" width="60%" />
