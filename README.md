@@ -77,12 +77,25 @@ We conducted a power consumption analysis based on the computed joint torques an
 ## 🛠️ Reproduction
 This repository contains the configuration overrides and environment logic compatible with **Isaac Lab 4.5.0**.
  1. **Install Isaac Lab:** Follow the [official guide](https://isaac-sim.github.io/IsaacLab/).
- 2. **Setup:** Place the envs and configs folders into your extension directory.
- 3. **Train:**
- ```Bash
- # Run headless to save VRAM on Laptop GPUs
- python scripts/train.py --task=Isaac-Velocity-Rough-Anymal-C-v0 --headless --video
- ```
+ 2. **Setup:** Place the envs and configs folders into your extension directory. Ensure you have the correct Python environment active:
+    ```Bash
+    python3.10 -m venv env_isaaclab
+    source env_isaaclab/bin/activate
+    ```
+ 3. **Train:** To train the agent from scratch, use the train.py script. The `--headless` flag is crucial for training on consumer hardware (like RTX 3060 laptops) to save VRAM for simulation rather than rendering.
+    ```Bash
+    python scripts/train.py --task=Isaac-Velocity-Flat-Anymal-C-v0 --num_envs=<NUM_ENVS> --headless
+    ```
+    *Note: Checkpoints will be saved in logs/skrl/anymal_c_flat_direct/...*
+ 4. **Evaluation & Logging:** To visualize the trained policy or log data for analysis, use the custom play_logging.py script. You must point to the .pt checkpoint generated during training.
+    ```Bash
+    python scripts/play_logging.py \
+     --task=Isaac-Velocity-Flat-Anymal-C-Direct-v0 \
+     --num_envs=1 \
+     --device="cpu" \
+     --checkpoint="<PATH_TO_YOUR_CHECKPOINT.pt>"
+    ```
+
 ## 📄 Project Report
 For a deep dive into the SEA (Serial Elastic Actuator) modeling attempts and detailed physics analysis, please refer to the full Project Report (PDF).
 
