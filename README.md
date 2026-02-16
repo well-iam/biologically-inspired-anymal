@@ -9,7 +9,7 @@
 This project implements a Reinforcement Learning framework to enforce a dynamic Bounding Gait on the ANYmal-C robot. By leveraging Curriculum Learning and custom Reward Shaping for phase synchronization , the policy achieves stable locomotion up to 3.0 m/s. The training pipeline is specifically optimized to run on consumer-grade hardware (RTX 3060 Laptop) within the NVIDIA Isaac Lab environment.
 
 <div align="center">
-  <img src="media/field_and_service_git.gif" width="60%" />
+  <img src="https://github.com/well-iam/well-iam/blob/main/previews/field_and_service_git.gif" width="60%" />
   <p><b>Final Policy:</b> Stable Bounding Gait at ~3.0 m/s</p>
 </div>
 
@@ -24,12 +24,12 @@ Standard RL baselines often produce generic trotting gaits. This project aims to
   <table width="10">
     <tr>
       <td align="center">
-        <img src="media/early_failure.gif" width="70%" />
+        <img src="https://github.com/user-attachments/assets/53e16f29-783d-4a00-b7a2-6fb769bdc8af" width="70%" />
         <br />
         <b>Early Failure:</b> Instability without Curriculum Learning.
       </td>
       <td align="center">
-        <img src="media/trot_gait.gif" width="70%" />
+        <img src="https://github.com/user-attachments/assets/57e5d602-decf-4e56-9709-4b97d0a52eab" width="70%" />
         <br />
         <b>Emergent Trot:</b> First stable gait achieved at 0.5 m/s.
       </td>
@@ -67,7 +67,8 @@ To prevent policy collapse at high speeds (where the robot would initially fall)
 ### Gait Analysis
 We validated the emergence of the gait by analyzing the foot contact patterns. As shown in the Gait Diagram below, the policy successfully learned to synchronize the front (LF+RF) and hind (LH+RH) pairs, with distinct flight phases (white gaps).
 
-<div align="center"> <img src="media/gait_diagram.png" width="45%" /> <p>Contact pattern analysis.</p> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/db7affb2-6041-4f42-936e-0c2a3f115a86" width="45%" /> <p>Contact pattern analysis.</p> </div>
+
 
 ### Energy & Autonomy
 We conducted a power consumption analysis based on the computed joint torques and velocities.
